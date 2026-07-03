@@ -55,8 +55,8 @@
     display:flex;align-items:center;justify-content:space-between;
     padding-top:12px;padding-bottom:12px;
   }
-  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;}
-  .brand img{height:44px;width:auto;}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
+  .brand img{height:44px;width:auto;flex-shrink:0;object-fit:contain;}
   .header-actions{display:flex;align-items:center;gap:14px;}
   .social-mini{display:flex;gap:10px;}
   .social-mini a{
@@ -281,6 +281,8 @@
     .hero{padding:56px 0 90px;}
     section{padding:56px 0;}
     .cta-final{padding:40px 22px;}
+    .brand img{height:34px;}
+    .social-mini a{width:32px;height:32px;}
   }
 </style>
 </head>
