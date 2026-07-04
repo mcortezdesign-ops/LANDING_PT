@@ -89,8 +89,18 @@
     position:relative;
     background:var(--navy);
     color:#fff;
-    padding:76px 0 110px;
+    padding:60px 0 96px;
     overflow:hidden;
+  }
+  .hero-bg{
+    position:absolute;inset:-15px;
+    background:url('assets/hero-bg.png') center/cover no-repeat;
+    filter:blur(9px) brightness(0.75);
+    transform:scale(1.06);
+  }
+  .hero-overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(160deg, rgba(27,36,111,0.93), rgba(27,36,111,0.82));
   }
   .hero::after{
     content:"";position:absolute;inset:auto 0 0 0;height:90px;
@@ -118,7 +128,7 @@
   }
   .hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
   .hero-dests{
-    margin-top:52px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap;
+    margin-top:38px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap;
     position:relative;z-index:2;
   }
   .chip{
@@ -131,8 +141,8 @@
   .chip .dot{width:8px;height:8px;border-radius:50%;background:var(--red);}
 
   /* SECTION generic */
-  section{padding:76px 0;}
-  .section-head{max-width:620px;margin:0 auto 44px;text-align:center;}
+  section{padding:52px 0;}
+  .section-head{max-width:620px;margin:0 auto 32px;text-align:center;}
   .section-head .kicker{
     display:block;font-family:'Baloo 2',sans-serif;color:var(--red);
     font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;
@@ -143,19 +153,19 @@
 
   /* WHY US */
   .why-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+    display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
   }
   .why-card{
     background:var(--card);border-radius:var(--radius);
-    padding:30px 26px;
+    padding:24px 22px;
     box-shadow:0 10px 28px rgba(30,33,64,0.06);
   }
   .why-card .icon{
-    width:52px;height:52px;border-radius:14px;
-    background:var(--tint);display:flex;align-items:center;justify-content:center;
-    margin-bottom:18px;
+    width:60px;height:60px;border-radius:50%;
+    overflow:hidden;
+    margin-bottom:16px;
   }
-  .why-card .icon svg{width:26px;height:26px;fill:var(--navy);}
+  .why-card .icon img{width:100%;height:100%;object-fit:cover;display:block;}
   .why-card h3{font-size:19px;margin-bottom:8px;}
   .why-card p{color:var(--muted);font-size:15px;margin:0;}
 
@@ -168,12 +178,12 @@
   .dest-card{
     position:relative;
     display:grid;grid-template-columns:200px 1fr auto;
-    align-items:center;gap:28px;
+    align-items:center;gap:24px;
     background:var(--card);
     border-radius:var(--radius);
-    padding:26px 30px;
+    padding:22px 26px;
     box-shadow:0 10px 28px rgba(30,33,64,0.06);
-    margin-bottom:28px;
+    margin-bottom:18px;
   }
   .dest-card:last-child{margin-bottom:0;}
   .dest-art{
@@ -199,11 +209,11 @@
   }
 
   /* TESTIMONIOS */
-  .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
   .test-card{
     background:var(--card);border-radius:var(--radius);
-    padding:28px 26px;box-shadow:0 10px 28px rgba(30,33,64,0.06);
-    display:flex;flex-direction:column;gap:16px;
+    padding:22px 22px;box-shadow:0 10px 28px rgba(30,33,64,0.06);
+    display:flex;flex-direction:column;gap:14px;
   }
   .stars{display:flex;gap:3px;}
   .stars svg{width:16px;height:16px;fill:var(--celeste);}
@@ -214,7 +224,7 @@
   .bridge{
     background:linear-gradient(135deg,#4B2E83,#7A3E8C);
     border-radius:28px;
-    padding:44px;
+    padding:34px 38px;
     color:#fff;
     display:grid;grid-template-columns:1fr auto;align-items:center;gap:28px;
   }
@@ -226,7 +236,7 @@
   /* CTA FINAL */
   .cta-final{
     background:var(--celeste);color:#fff;border-radius:28px;
-    padding:56px 40px;text-align:center;
+    padding:44px 34px;text-align:center;
   }
   .cta-final h2{color:#fff;font-size:clamp(26px,3.6vw,38px);}
   .cta-final p{color:rgba(255,255,255,0.88);max-width:480px;margin:14px auto 28px;font-size:17px;}
@@ -314,6 +324,8 @@
 
   <!-- HERO -->
   <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
     <div class="wrap">
       <span class="eyebrow">América · Caribe · Europa</span>
       <h1>El viaje lo armamos nosotros.<br>Las vacaciones las disfrutás vos.</h1>
@@ -342,17 +354,17 @@
       </div>
       <div class="why-grid">
         <div class="why-card">
-          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10m0 2c-4.42 0-8 2.24-8 5v2h16v-2c0-2.76-3.58-5-8-5"/></svg></div>
+          <div class="icon"><img src="assets/icon-atencion.png" alt=""></div>
           <h3>Atención personal</h3>
           <p>Cada consulta la atiende una persona, no un formulario automático. Nos ocupamos de entender qué necesitás antes de proponerte nada.</p>
         </div>
         <div class="why-card">
-          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <div class="icon"><img src="assets/icon-conocemos.png" alt=""></div>
           <h3>Conocemos los destinos</h3>
           <p>Información amplia y actualizada de América, el Caribe y Europa, para que la decisión no sea a ciegas.</p>
         </div>
         <div class="why-card">
-          <div class="icon"><svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M10 4h4v2h-4zm10 15H4V8h16z"/></svg></div>
+          <div class="icon"><img src="assets/icon-organizacion.png" alt=""></div>
           <h3>Organización de punta a punta</h3>
           <p>Coordinamos cada detalle del viaje familiar o grupal para que vos sólo tengas que ocuparte de viajar.</p>
         </div>
