@@ -120,7 +120,7 @@
     color:#fff;
     font-size:clamp(32px,5.4vw,54px);
     font-weight:800;
-    max-width:820px;margin:0 auto;
+    max-width:820px;margin:26px auto 0;
   }
   .hero p.lead{
     max-width:620px;margin:18px auto 0;
@@ -132,20 +132,8 @@
   }
   .hero p.lead.lead-close{font-weight:600;color:#fff;}
   .hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px;}
-  .hero-dests{
-    margin-top:38px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap;
-    position:relative;z-index:2;
-  }
-  .chip{
-    display:flex;align-items:center;gap:8px;
-    background:rgba(255,255,255,0.1);
-    border:1px solid rgba(255,255,255,0.2);
-    padding:9px 16px 9px 10px;border-radius:999px;
-    font-size:14px;font-weight:500;color:#fff;
-  }
-  .chip .dot{width:8px;height:8px;border-radius:50%;background:var(--red);}
   .services-row{
-    margin-top:22px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;
+    margin-top:0;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;
     position:relative;z-index:2;
   }
   .chip-service{
@@ -345,6 +333,16 @@
     <div class="hero-overlay"></div>
     <div class="wrap">
       <span class="eyebrow">América · Caribe · Europa · Oriente · Sudáfrica</span>
+      <div class="services-row">
+        <span class="chip-service">Aéreos</span>
+        <span class="chip-service">Hoteles</span>
+        <span class="chip-service">Circuitos</span>
+        <span class="chip-service">Trenes</span>
+        <span class="chip-service">Cruceros</span>
+        <span class="chip-service">Grupales</span>
+        <span class="chip-service">Autos</span>
+        <span class="chip-service">Asistencia</span>
+      </div>
       <h1>El viaje lo armamos nosotros.<br>Las vacaciones las disfrutás vos.</h1>
       <p class="lead lead-strong">Nosotros nos ocupamos de la logística; vos solo de armar la valija.</p>
       <p class="lead">Olvidate de los formularios interminables y las esperas. Queremos que disfrutes desde el primer momento. Con el respaldo de 20 años de trayectoria en el mercado, te brindamos un servicio minorista exclusivo y un acompañamiento personal de principio a fin.</p>
@@ -355,23 +353,6 @@
           Consultar por WhatsApp
         </a>
         <a class="btn btn-outline" style="border-color:rgba(255,255,255,0.5);color:#fff;" href="#destinos">Ver destinos</a>
-      </div>
-      <div class="hero-dests">
-        <span class="chip"><span class="dot"></span>América</span>
-        <span class="chip"><span class="dot"></span>Caribe</span>
-        <span class="chip"><span class="dot"></span>Europa</span>
-        <span class="chip"><span class="dot"></span>Oriente</span>
-        <span class="chip"><span class="dot"></span>Sudáfrica</span>
-      </div>
-      <div class="services-row">
-        <span class="chip-service">Aéreos</span>
-        <span class="chip-service">Hoteles</span>
-        <span class="chip-service">Circuitos</span>
-        <span class="chip-service">Trenes</span>
-        <span class="chip-service">Cruceros</span>
-        <span class="chip-service">Grupales</span>
-        <span class="chip-service">Autos</span>
-        <span class="chip-service">Asistencia</span>
       </div>
     </div>
   </section>
